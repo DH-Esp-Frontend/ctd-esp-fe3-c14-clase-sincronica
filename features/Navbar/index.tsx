@@ -48,9 +48,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
   },
 }));
 
@@ -67,14 +64,14 @@ export default function Navbar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <Image src="/logo-meli-header.png" width={70} height={70} alt='meli logo'/>
+            <Image src="/logo-meli-header.png" width={80} height={70} alt='meli logo'/>
           </IconButton>
           <Search >
             <SearchIconWrapper>
               <SearchIcon  color='inherit'/>
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Buscar productos, marcas y mas..."
+              placeholder="Consulta el stock de productos, marcas y mas..."
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
