@@ -40,16 +40,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  width: "50vw",
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-  },
-}));
+
 
 export default function Navbar() {
 
@@ -70,7 +61,7 @@ export default function Navbar() {
             <SearchIconWrapper>
               <SearchIcon  color='inherit'/>
             </SearchIconWrapper>
-            <StyledInputBase
+            <InputBase
               placeholder="Consulta el stock de productos, marcas y mas..."
               inputProps={{ 'aria-label': 'search' }}
             />
