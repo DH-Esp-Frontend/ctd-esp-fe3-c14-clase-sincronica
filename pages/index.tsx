@@ -30,7 +30,7 @@ const columns: GridColDef[] = [
     { field: 'abv', headerName: 'ABV'},
     { field: 'attenuation_level', headerName: 'Attenuation level'},
     { field: 'yeast', headerName: 'Yeast', width: 200},
-    { field: 'malt', headerName: 'Malt'},
+    { field: 'malt', headerName: 'Malt', valueGetter: (params) => params.row.name},
 ]
 
 const Home: NextPage<Props> = ({ beers }) => {
@@ -43,7 +43,7 @@ const Home: NextPage<Props> = ({ beers }) => {
     abv: beer.abv,
     attenuation_level: beer.attenuation_level,
     yeast: beer.ingredients.yeast,
-    malt: beer.ingredients.malt[0].name
+    malt: beer.ingredients.malt[0]
     }
    })
 
