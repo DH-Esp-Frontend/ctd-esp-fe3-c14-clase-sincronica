@@ -40,7 +40,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-
+//Aqui deberias crear tu StyledInput
 
 export default function Navbar() {
 
@@ -61,6 +61,7 @@ export default function Navbar() {
             <SearchIconWrapper>
               <SearchIcon  color='inherit'/>
             </SearchIconWrapper>
+            {/* Cambiar InputBase por StyledInput */}
             <InputBase
               placeholder="Consulta el stock de productos, marcas y mas..."
               inputProps={{ 'aria-label': 'search' }}

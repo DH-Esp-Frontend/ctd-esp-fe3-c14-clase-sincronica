@@ -24,11 +24,9 @@ interface Props {
 
 const Home: NextPage<Props> = ({ beers }) => {
 
-
-
   return (
     <div style={{ height: "70vh", width: '100%' }}>
-     
+     {/* Aqui deberias realizar tu tabla con Table o DataGrid */}
     </div>
   )
 }
