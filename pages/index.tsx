@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import { DataGrid,GridColDef } from '@mui/x-data-grid';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 
 type Ingredient = {
@@ -54,6 +55,30 @@ const Home: NextPage<Props> = ({ beers }) => {
         rows={rows} 
         columns={columns}
       />
+
+      {/* Opcion con Table */}
+      {/* <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell>First Brewed</TableCell>
+              <TableCell>ABV</TableCell>
+              <TableCell>Food Pairing</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {beers.map(beer=>(
+              <TableRow key={beer.id}>
+                <TableCell>{beer.name} </TableCell>
+                <TableCell>{beer.first_brewed} </TableCell>
+                <TableCell>{beer.abv} </TableCell>
+                <TableCell>{beer.food_pairing} </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer> */}
     </div>
   )
 }
